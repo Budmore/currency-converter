@@ -1,0 +1,26 @@
+.currency-converter {
+  max-width: 100%;
+}
+
+.currency-converter__title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.currency-converter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.cu
+
+padding: 1px;
+    border: 1px solid #5f6368;
+    caret-color: var(--Nsm0ce);
+    color: var(--IXoxUe);
+    overflow: hidden;
+    display: flex;
+    border-radius: 6px;
