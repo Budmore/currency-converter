@@ -1,5 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL;
-const API_KEY = import.meta.env.VITE_API_KEY;
+import { API_KEY, API_URL } from "../../config";
 
 interface ConvertParams {
   from: string;
@@ -7,7 +6,7 @@ interface ConvertParams {
   amount: string;
 }
 
-interface CurrencyConversionResponse {
+export interface CurrencyConversionResponse {
   meta: Meta;
   response: ConversionResult;
   timestamp: number;

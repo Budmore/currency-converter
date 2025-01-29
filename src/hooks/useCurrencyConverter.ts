@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import {
   ConversionResult,
   convertCurrency,
-} from "~/services/convertCurrency.service";
+} from "~/services/convert/convertCurrency.service";
 
 export const useCurrencyConverter = () => {
   const [fromCurrency, setFromCurrency] = useState("USD");

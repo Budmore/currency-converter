@@ -22,7 +22,6 @@ body {
 
 .layout {
     height: 100vh;
-    min-height: 320px;
     width: 100%;
     
     display: flex;

@@ -1,5 +1,8 @@
 import React, { createContext, useEffect, useState } from "react";
-import { Currency, fetchCurrencies } from "~/services/fetchCurrencies.service";
+import {
+  Currency,
+  fetchCurrencies,
+} from "~/services/currencies/fetchCurrencies.service";
 
 interface CurrencyContextState {
   currencies: Currency[];

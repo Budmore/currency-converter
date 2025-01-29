@@ -2,7 +2,7 @@
 
 ## Initial Setup
 
-- Decision: use as less of 3rd party libraries as it is reasonable.
+- Decision: Don't use any 3rd party libraries as it is reasonable.
 
 Vanila CSS, Window.fetch()
 

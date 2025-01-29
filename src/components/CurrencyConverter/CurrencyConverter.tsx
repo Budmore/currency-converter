@@ -5,6 +5,7 @@ import { useCurrencyConverter } from "~/hooks/useCurrencyConverter";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { SwapButton } from "../SwapButton/SwapButton";
+import { UnixTimestamp } from "../UnixTimestamp/UnixTimestamp";
 import "./CurrencyConverter.css";
 
 export function CurrencyConverter() {
@@ -76,7 +77,8 @@ export function CurrencyConverter() {
             </span>
           </p>
           <p className="currency-converter__timestamp">
-            Last updated: {new Date().toLocaleString()}
+            <span>Last updated:</span>
+            <UnixTimestamp timestampInSeconds={conversionResult.timestamp} />
           </p>
         </div>
       )}

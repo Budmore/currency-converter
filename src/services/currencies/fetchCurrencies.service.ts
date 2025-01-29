@@ -1,3 +1,5 @@
+import { API_KEY, API_URL } from "../../config";
+
 export interface Currency {
   id: number;
   name: string;
@@ -13,7 +15,7 @@ export interface Currency {
 
 type CurrenciesType = "fiat" | "crypto";
 
-interface ApiResponse {
+export interface ApiResponse {
   meta: {
     code: number;
     disclaimer: string;
@@ -22,8 +24,6 @@ interface ApiResponse {
   [key: Currency["id"]]: Currency;
 }
 
-const API_URL = import.meta.env.VITE_API_URL;
-const API_KEY = import.meta.env.VITE_API_KEY;
 const CURRENCIES_TYPE: CurrenciesType = "fiat";
 
 export async function fetchCurrencies(): Promise<ApiResponse> {

@@ -62,16 +62,21 @@
 
 .result-text__from {
   font-size: 0.875rem;
-  color: var(--text-soft)
+  color: var(--text-soft);
 }
 
 .result-text__to {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #000;
+  color: var(--text-default);
 }
 
 .currency-converter__timestamp {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
   font-size: 0.875rem;
-  color: var(--text-soft)
+  color: var(--text-soft);
+
 }
