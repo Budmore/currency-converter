@@ -1,12 +1,8 @@
 .currency-input {
-  padding: 1px 0;
+  padding: 4px 6px;
   
   display: flex;
   border-radius: 3px;
-  overflow: hidden;
-  background-color: white;
-  align-items: center;
-  justify-content: space-between;
   border: 1px solid var(--border-default);
 }
 
@@ -15,28 +11,6 @@
   cursor: pointer;
 } 
 
-.currency-input:focus-within {
+.currency-input:focus-visible {
   outline: 1px solid var(--border-focus);
 } 
-
-
-.currency-input__value {
-  width: 70%;
-  border: none;
-  box-shadow: none;
-  padding: 4px 8px;
-  outline: none;
-}
-
-.currency-input__select {
-  width: 30%;
-  border-left: 1px solid var(--border-default);
-}
-
-.currency-input__select select {
-  width: 100%;
-  border: none;
-  padding: 4px 8px;
-  background-color: transparent;
-  border-radius:  3px;
-}

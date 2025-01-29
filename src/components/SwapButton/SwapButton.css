@@ -1,0 +1,20 @@
+.swap-button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swap-button:hover {
+  background-color: #e2e3e5;
+}
+
+.swap-button:focus-visible {
+  background-color: #e2e3e5;
+  outline: 1px solid var(--border-focus);
+}

@@ -7,10 +7,12 @@ html {
     --background-default: rgb(252, 252, 252, 1);
     --background-soft: rgba(249, 249, 249, 1);
     --text-default: #000;
-    --text-accent: #2563eb;
+    --text-soft: #54627a;
     --border-default: rgba(0, 0, 0, 0.5);
     --border-hover: rgba(0, 0, 0, 0.7);
     --border-focus: #000;
+    --interactive-accent: rgb(159, 232, 112);
+    --interactive-accent-hover: rgb(128, 225, 66)
 }
 
 body {
@@ -20,7 +22,7 @@ body {
 
 .layout {
     height: 100vh;
-    min-height: 600px;
+    min-height: 320px;
     width: 100%;
     
     display: flex;
@@ -29,11 +31,5 @@ body {
 }
 
 .widget {
-    width: 100%;
-    max-width: 480px;
-    min-height: 300px;
-    border-radius: 3px;
-    padding: 32px;
-    background-color: var(--background-default);
-    box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.1);
+    min-height: 320px;
 }

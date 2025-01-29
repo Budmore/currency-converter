@@ -1,41 +1,32 @@
+import { InputHTMLAttributes } from "react";
 import "./CurrencyInput.css";
 
-interface CurrencyInputProps {
+interface CurrencyInputProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange"> {
+  name: string;
   value: string;
-  currency: string;
-  currencies: string[];
-  onValueChange: (value: string) => void;
-  onCurrencyChange: (value: string) => void;
+  onChange: (value: string) => void;
 }
 
 export function CurrencyInput({
+  name,
   value,
-  currency,
-  currencies,
-  onValueChange,
-  onCurrencyChange,
+  onChange,
+  ...rest
 }: CurrencyInputProps) {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(event.target.value);
+  };
+
   return (
-    <div className="currency-input">
-      <input
-        type="text"
-        className="currency-input__value"
-        value={value}
-        onChange={(e) => onValueChange(e.target.value)}
-        placeholder="0.00"
-      />
-      <div className="currency-input__select">
-        <select
-          value={currency}
-          onChange={(e) => onCurrencyChange(e.target.value)}
-        >
-          {currencies.map((curr) => (
-            <option key={curr} value={curr}>
-              {curr}
-            </option>
-          ))}
-        </select>
-      </div>
-    </div>
+    <input
+      type="number"
+      name={name}
+      className="currency-input"
+      value={value}
+      onChange={handleChange}
+      placeholder="0.00"
+      {...rest}
+    />
   );
 }

@@ -1,0 +1,11 @@
+
+.currency-selector {
+    width: 100%;
+    padding: 4px 2px;
+    border-radius: 3px;
+}
+
+.currency-selector:focus-visible {
+    outline: 1px solid var(--border-focus);
+} 
+  
