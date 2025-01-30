@@ -10,6 +10,7 @@ export const useCurrencyConverter = () => {
   const [amount, setAmount] = useState("");
   const [conversionResult, setConversionResult] =
     useState<ConversionResult | null>(null);
+  const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export const useCurrencyConverter = () => {
     }
 
     try {
+      setIsPending(true);
       const result = await convertCurrency({
         from: fromCurrency,
         to: toCurrency,
@@ -36,6 +38,8 @@ export const useCurrencyConverter = () => {
       } else {
         setError("An unexpected error occurred.");
       }
+    } finally {
+      setIsPending(false);
     }
   }, [fromCurrency, toCurrency, amount]);
 
@@ -45,6 +49,7 @@ export const useCurrencyConverter = () => {
     amount,
     conversionResult,
     error,
+    isPending,
     setFromCurrency,
     setToCurrency,
     setAmount,

@@ -1,9 +1,9 @@
 import { FormEvent, useContext } from "react";
 import { CurrencyInput } from "~/components/CurrencyInput/CurrencyInput";
 import { CurrencySelector } from "~/components/CurrencySelector/CurrencySelector";
+import { CurrencyContext } from "~/contexts/CurrencyContext";
 import { useCurrencyConverter } from "~/hooks/useCurrencyConverter";
-import { CurrencyContext } from "../../contexts/CurrencyContext";
-import { formatCurrency } from "../../utils/formatCurrency";
+import { formatCurrency } from "~/utils/formatCurrency";
 import { SwapButton } from "../SwapButton/SwapButton";
 import { UnixTimestamp } from "../UnixTimestamp/UnixTimestamp";
 import "./CurrencyConverter.css";

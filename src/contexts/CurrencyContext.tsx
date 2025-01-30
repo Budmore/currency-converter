@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import {
   Currency,
   fetchCurrencies,
@@ -11,7 +11,7 @@ interface CurrencyContextState {
 }
 
 interface CurrencyProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const CurrencyContext = createContext<CurrencyContextState>({
